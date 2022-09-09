@@ -6,16 +6,6 @@ if (!defined('ABSPATH')) {
 
 function add_flair_antispam_settings_page(): void
 {
-//	add_menu_page(
-//		'Flair Antispam plugin',
-//		'Flair Antispam Config',
-//		'manage_options',
-//		'flair-antispam-settings-page',
-//		'flair_antispam_admin_index',
-//		'dashicons-admin-generic',
-//		110
-//	);
-
 	add_options_page(
             __('Flair Antispam plugin', "flair-antispam"),
             __('Flair Antispam Config', "flair-antispam"),

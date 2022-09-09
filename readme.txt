@@ -1,8 +1,9 @@
 === Flair Antispam ===
 Contributors: bahson
+Donate link: https://flaircore.com/flair-core/paypal_payment
 Tags: antispam, spam-filtering, spam-detection, content moderation
 Requires at least: 5.7
-Tested up to: 6.2
+Tested up to: 6.0
 Stable tag: 1.0.0
 Requires PHP: 7.0
 License: GPLv2 or later

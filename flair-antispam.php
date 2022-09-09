@@ -4,7 +4,7 @@
  * Plugin Name:       Flair Antispam
  * Description:       Filter and unpublish spam contents (posts/comments) and provides a way to analyze the spam content.
  * Requires at least: 5.7
- * Tested up to: 6.2
+ * Tested up to: 6.0
  * Stable tag: 1.0.0
  * Requires PHP:      7.0
  * Version:           1.0.0
