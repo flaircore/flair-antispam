@@ -4,7 +4,7 @@ Donate link: https://flaircore.com/flair-core/paypal_payment
 Tags: antispam, spam-filtering, spam-detection, content moderation
 Requires at least: 5.7
 Tested up to: 6.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -39,3 +39,6 @@ eg for words like; wolf, moon, woof, @gmail you will enter something like: wolf,
 
 = 1.0.0 =
 First version
+
+= 1.0.1 =
+Add screenshots

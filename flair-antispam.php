@@ -7,7 +7,7 @@
  * Tested up to: 6.0
  * Stable tag: 1.0.0
  * Requires PHP:      7.0
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Nicholas Babu
  * Author URI:        https://profiles.wordpress.org/bahson/
  * License:           GPL-2.0-or-later
