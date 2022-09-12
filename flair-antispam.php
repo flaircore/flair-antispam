@@ -2,12 +2,11 @@
 
 /**
  * Plugin Name:       Flair Antispam
- * Description:       Filter and unpublish spam contents (posts/comments) and provides a way to analyze the spam content.
+ * Description:       Filter and unpublish contents (posts/comments) based of defined words/phrases and provides a way to analyze the spam content.
  * Requires at least: 5.7
  * Tested up to: 6.0
- * Stable tag: 1.0.0
  * Requires PHP:      7.0
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Nicholas Babu
  * Author URI:        https://profiles.wordpress.org/bahson/
  * License:           GPL-2.0-or-later
@@ -102,6 +101,9 @@ if (!class_exists('Flair_AntiSpam')) {
 
 					$this->create_entry( $post_id, 'post' );
 
+					// Fires this event throughout the app.
+					do_action('flair_antispam_post', $post);
+
 				} else {
 					$wpdb
 						->delete( $table, array( 'item_id' => $post_id ), array( '%d' ) );
@@ -130,6 +132,9 @@ if (!class_exists('Flair_AntiSpam')) {
 
 					// re-hook this function
 					add_action( 'comment_post', array( $this, 'is_spam_comment' ), 10, 2 );
+
+					// Fires this event throughout the app.
+					do_action('flair_antispam_post', $comment);
 				} else {
 					$wpdb
 						->delete( $table, array( 'item_id' => $comment_id ), array( '%d' ));

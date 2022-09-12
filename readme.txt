@@ -4,19 +4,25 @@ Donate link: https://flaircore.com/flair-core/paypal_payment
 Tags: antispam, spam-filtering, spam-detection, content moderation
 Requires at least: 5.7
 Tested up to: 6.0
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Filter and unpublish "spam" contents (posts/comments) and provides a way to analyze the spam content.
+Filter and unpublish contents (posts/comments) according to defined patterns and provides
+a way to analyze the unpublished content.
 
 == Description ==
 
-This WordPress plugin provides a spam filter functionality, for the defined patters (words/phrases), and
+This WordPress plugin provides a way to filter content according to the defined patters (words/phrases), and
 sets post status to draft, and comment status to 0 if their contents match the defined words and or phrases.
 
 You can filter contents by any rules, and for all roles in your WordPress website/application.
+
+*USE CASES INCLUDE:*
+* You run multiple sites associated with multiple brands, and don't want to mix brand names in the
+contents of each site (content editor).
+* Don't want users to use certain words/phrases in posts and comments.
 
 == Installation ==
 
@@ -42,3 +48,6 @@ First version
 
 = 1.0.1 =
 Add screenshots
+
+= 1.0.2 =
+Added do_actions, when such content is posted so other plugins can build on that. see docs.md for more.

@@ -7,18 +7,18 @@ if (!defined('ABSPATH')) {
 function add_flair_antispam_settings_page(): void
 {
 	add_options_page(
-            __('Flair Antispam plugin', "flair-antispam"),
-            __('Flair Antispam Config', "flair-antispam"),
+		__('Flair Antispam plugin', "flair-antispam"),
+		__('Flair Antispam Config', "flair-antispam"),
 		'manage_options',
 		'flair-antispam-settings-page',
 		'flair_antispam_admin_index',
-            null);
+		null);
 }
 
 
 function flair_antispam_settings_init(): void
 {
-    // Setup settings section
+	// Setup settings section
 	add_settings_section(
 		'flair_antispam_settings_section',
 		'Flair Antispam Settings Page',
@@ -28,7 +28,7 @@ function flair_antispam_settings_init(): void
 
 	// Register form fields
 
-	// app_id
+	// phrases
 	register_setting(
 		'flair-antispam-settings-page',
 		'flair_antispam_settings_phrases',
@@ -53,7 +53,7 @@ function flair_antispam_settings_phrases_callback(): void
 {
 	$options = get_option('flair_antispam_settings_phrases');
 	?>
-	<div class="flair-antispam-settings-phrases">
+    <div class="flair-antispam-settings-phrases">
         <label for="flair_antispam_settings_phrases">
             Words or phrases to look for, comma separated, no spaces unless you want to include them too.
         </label>
@@ -68,11 +68,11 @@ function flair_antispam_settings_phrases_callback(): void
         ><?php esc_html_e( $options, 'flair-antispam' ); ?></textarea>
         <div>
             Current pattern according to settings: '
-            <?php
-                $pattern = str_replace(',', '|', $options);
-                $pattern = '/('.$pattern.')/i';
-                esc_html_e( $pattern, 'flair-antispam' );
-            ?> '
+			<?php
+			$pattern = str_replace(',', '|', $options);
+			$pattern = '/('.$pattern.')/i';
+			esc_html_e( $pattern, 'flair-antispam' );
+			?> '
         </div>
     </div>
 
@@ -82,8 +82,8 @@ function flair_antispam_settings_phrases_callback(): void
 function flair_antispam_admin_index(): void
 {
 	?>
-	<div class="wrap">
-		<form action="options.php" method="post">
+    <div class="wrap">
+        <form action="options.php" method="post">
 			<?php
 
 			// Security field
@@ -97,12 +97,12 @@ function flair_antispam_admin_index(): void
 			submit_button('Save words/phrases');
 
 			?>
-		</form>
+        </form>
         <div class="phrases-example-hints">
             <p>Example 1: wolf,moon,what will be converted to /(wolf|moon|what)/i</p>
             <p>Example 2: wolf, moon, what will be converted to /(wolf| moon| what)/i</p>
         </div>
-	</div>
+    </div>
 	<?php
 }
 
