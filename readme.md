@@ -1,14 +1,9 @@
 # Flair Antispam ![Flair Antispam](/assets/icon-256x256.png).
 
-* Contributors: bahson
-* Donate link: https://flaircore.com/flair-core/paypal_payment
-* Tags: antispam, spam-filtering, spam-detection, content moderation
-* Requires at least: 5.6
-* Tested up to: 6.0
-* Stable tag: 1.0.2
-* Requires PHP: 7.0
-* License: GPLv2 or later
-* License URI: https://www.gnu.org/licenses/gpl-2.0.html
+### Code for blog: Content moderation in WordPress (wordpress apis) @
+* https://flaircore.com/blog/content-moderation-wordpress-wordpress-apis 
+### OR 
+* https://dev.to/nickbahson/content-moderation-in-wordpress-wordpress-apis-55p0
 
 Filter and unpublish contents (posts/comments) according to defined patterns and provides
 a way to analyze the unpublished content.
@@ -51,8 +46,3 @@ You can filter contents by any rules, and for all roles in your WordPress websit
 1. Configuration form example view ![Configuration form example view](/assets/screenshot-1.png).
    == Changelog ==
 
-= 1.0.0 =
-First version
-
-= 1.0.2 =
-Added do_actions, when such content is posted so other plugins can build on that. see docs.md for more.
